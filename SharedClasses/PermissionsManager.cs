@@ -328,8 +328,10 @@ namespace vMenuShared
             WPHackingDevice,
             // MP2024_01 DLC (V 3258)
             WPStunRod,
+            // Addon Weapons
+            WPAddonWeapons,
             #endregion
-
+            
             // Weapon Loadouts Menu
             #region weapon loadouts
             WLMenu,
