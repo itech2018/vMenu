@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Linq;
 
 using CitizenFX.Core;
@@ -110,6 +110,7 @@ namespace vMenuClient.data
                         SpawnName = realName,
                         Name = localizedName,
                         AddonComponents = componentHashes,
+                        Perm = weaponPermissions["AddonWeapons"]
                     };
                     if (!_addonWeaponsList.Contains(avw))
                     {
@@ -118,6 +119,11 @@ namespace vMenuClient.data
                 }
             }
         }
+        #region addon weapon permissions
+        public static readonly Dictionary<string, Permission> weaponPermissions = new()
+        {
+            ["AddonWeapons"] = Permission.WPAddonWeapons,
+        };
+        #endregion
     }
 }
-
